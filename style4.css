@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+    color: aqua;
+}
+
+.container{
+    position: relative;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    border-color: aqua;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid;
+    box-shadow: 0 0 2rem black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+    color: rgb(248, 247, 247);
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 15px;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    z-index: 2;
+}
+
+.h{
+    position: absolute;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+
+}
+
+.h i{
+    position: absolute;
+    background: var(--clr);
+    width: 8px;
+    height: 60px;
+    border-radius: 8px;
+    box-shadow: 0 0 1rem black;
+}
+
+.m{
+    position: absolute;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+}
+
+.m i{
+    position: absolute;
+    background: var(--clr);
+    width: 6px;
+    height: 80px;
+    border-radius: 8px;
+    box-shadow: 0 0 1rem black;
+}
+
+.s{
+    position: absolute;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+}
+
+.s i{
+    position: absolute;
+    background: var(--clr);
+    width: 4px;
+    height: 94px;
+    border-radius: 8px;
+    box-shadow: 0 0 1rem black;
+}
+
+.digital {
+    width: 100px;
+    position: absolute;
+}
+
+.digiclock {
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
